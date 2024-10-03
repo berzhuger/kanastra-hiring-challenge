@@ -1,0 +1,326 @@
+File /app/challenge/challenge/settings.py previous mtime: 1727879792.6187131, current mtime: 1727882082.4339132
+/app/challenge/challenge/settings.py notified as changed. Signal results: [(<function template_changed at 0x7a209a6c53a0>, None), (<function translation_file_changed at 0x7a2099a684a0>, None)].
+/app/challenge/challenge/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 200 45
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100005 LIMIT 21; args=(1100005,); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100005 LIMIT 21; args=(1100005,); alias=default
+(0.002) INSERT INTO "api_emaillog" ("debt_id", "sent_at", "status") VALUES (1100005, '2024-10-02T15:15:06.325163+00:00'::timestamptz, 'Sent') RETURNING "api_emaillog"."id"; args=(1100005, datetime.datetime(2024, 10, 2, 15, 15, 6, 325163, tzinfo=datetime.timezone.utc), 'Sent'); alias=default
+(0.003) INSERT INTO "api_invoice" ("debt_id", "invoice_status", "generated_at") VALUES (1100005, 'Processed', '2024-10-02T15:15:06.325165+00:00'::timestamptz) RETURNING "api_invoice"."id"; args=(1100005, InvoiceStatusChoices.PROCESSED, datetime.datetime(2024, 10, 2, 15, 15, 6, 325165, tzinfo=datetime.timezone.utc)); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100006 LIMIT 21; args=(1100006,); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100006 LIMIT 21; args=(1100006,); alias=default
+(0.002) INSERT INTO "api_invoice" ("debt_id", "invoice_status", "generated_at") VALUES (1100006, 'Processed', '2024-10-02T15:15:06.330906+00:00'::timestamptz) RETURNING "api_invoice"."id"; args=(1100006, InvoiceStatusChoices.PROCESSED, datetime.datetime(2024, 10, 2, 15, 15, 6, 330906, tzinfo=datetime.timezone.utc)); alias=default
+(0.003) INSERT INTO "api_emaillog" ("debt_id", "sent_at", "status") VALUES (1100006, '2024-10-02T15:15:06.331291+00:00'::timestamptz, 'Sent') RETURNING "api_emaillog"."id"; args=(1100006, datetime.datetime(2024, 10, 2, 15, 15, 6, 331291, tzinfo=datetime.timezone.utc), 'Sent'); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100007 LIMIT 21; args=(1100007,); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100007 LIMIT 21; args=(1100007,); alias=default
+(0.002) INSERT INTO "api_emaillog" ("debt_id", "sent_at", "status") VALUES (1100007, '2024-10-02T15:15:06.401476+00:00'::timestamptz, 'Sent') RETURNING "api_emaillog"."id"; args=(1100007, datetime.datetime(2024, 10, 2, 15, 15, 6, 401476, tzinfo=datetime.timezone.utc), 'Sent'); alias=default
+(0.003) INSERT INTO "api_invoice" ("debt_id", "invoice_status", "generated_at") VALUES (1100007, 'Processed', '2024-10-02T15:15:06.401486+00:00'::timestamptz) RETURNING "api_invoice"."id"; args=(1100007, InvoiceStatusChoices.PROCESSED, datetime.datetime(2024, 10, 2, 15, 15, 6, 401486, tzinfo=datetime.timezone.utc)); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100008 LIMIT 21; args=(1100008,); alias=default
+(0.002) INSERT INTO "api_invoice" ("debt_id", "invoice_status", "generated_at") VALUES (1100008, 'Processed', '2024-10-02T15:15:06.406754+00:00'::timestamptz) RETURNING "api_invoice"."id"; args=(1100008, InvoiceStatusChoices.PROCESSED, datetime.datetime(2024, 10, 2, 15, 15, 6, 406754, tzinfo=datetime.timezone.utc)); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100008 LIMIT 21; args=(1100008,); alias=default
+(0.002) INSERT INTO "api_emaillog" ("debt_id", "sent_at", "status") VALUES (1100008, '2024-10-02T15:15:06.415858+00:00'::timestamptz, 'Sent') RETURNING "api_emaillog"."id"; args=(1100008, datetime.datetime(2024, 10, 2, 15, 15, 6, 415858, tzinfo=datetime.timezone.utc), 'Sent'); alias=default
+/app/challenge/challenge/celery.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 200 45
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100009 LIMIT 21; args=(1100009,); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100009 LIMIT 21; args=(1100009,); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100010 LIMIT 21; args=(1100010,); alias=default
+(0.002) INSERT INTO "api_emaillog" ("debt_id", "sent_at", "status") VALUES (1100009, '2024-10-02T15:15:48.755874+00:00'::timestamptz, 'Sent') RETURNING "api_emaillog"."id"; args=(1100009, datetime.datetime(2024, 10, 2, 15, 15, 48, 755874, tzinfo=datetime.timezone.utc), 'Sent'); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100010 LIMIT 21; args=(1100010,); alias=default
+(0.002) INSERT INTO "api_invoice" ("debt_id", "invoice_status", "generated_at") VALUES (1100010, 'Processed', '2024-10-02T15:15:48.757316+00:00'::timestamptz) RETURNING "api_invoice"."id"; args=(1100010, InvoiceStatusChoices.PROCESSED, datetime.datetime(2024, 10, 2, 15, 15, 48, 757316, tzinfo=datetime.timezone.utc)); alias=default
+(0.003) INSERT INTO "api_invoice" ("debt_id", "invoice_status", "generated_at") VALUES (1100009, 'Processed', '2024-10-02T15:15:48.755850+00:00'::timestamptz) RETURNING "api_invoice"."id"; args=(1100009, InvoiceStatusChoices.PROCESSED, datetime.datetime(2024, 10, 2, 15, 15, 48, 755850, tzinfo=datetime.timezone.utc)); alias=default
+(0.001) INSERT INTO "api_emaillog" ("debt_id", "sent_at", "status") VALUES (1100010, '2024-10-02T15:15:48.758737+00:00'::timestamptz, 'Sent') RETURNING "api_emaillog"."id"; args=(1100010, datetime.datetime(2024, 10, 2, 15, 15, 48, 758737, tzinfo=datetime.timezone.utc), 'Sent'); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100011 LIMIT 21; args=(1100011,); alias=default
+(0.002) INSERT INTO "api_invoice" ("debt_id", "invoice_status", "generated_at") VALUES (1100011, 'Processed', '2024-10-02T15:15:48.816554+00:00'::timestamptz) RETURNING "api_invoice"."id"; args=(1100011, InvoiceStatusChoices.PROCESSED, datetime.datetime(2024, 10, 2, 15, 15, 48, 816554, tzinfo=datetime.timezone.utc)); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100012 LIMIT 21; args=(1100012,); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100012 LIMIT 21; args=(1100012,); alias=default
+(0.001) SELECT "api_debt"."id", "api_debt"."name", "api_debt"."government_id", "api_debt"."email", "api_debt"."debt_amount", "api_debt"."debt_due_date", "api_debt"."debt_id" FROM "api_debt" WHERE "api_debt"."id" = 1100011 LIMIT 21; args=(1100011,); alias=default
+(0.002) INSERT INTO "api_emaillog" ("debt_id", "sent_at", "status") VALUES (1100012, '2024-10-02T15:15:48.881528+00:00'::timestamptz, 'Sent') RETURNING "api_emaillog"."id"; args=(1100012, datetime.datetime(2024, 10, 2, 15, 15, 48, 881528, tzinfo=datetime.timezone.utc), 'Sent'); alias=default
+(0.004) INSERT INTO "api_invoice" ("debt_id", "invoice_status", "generated_at") VALUES (1100012, 'Processed', '2024-10-02T15:15:48.881535+00:00'::timestamptz) RETURNING "api_invoice"."id"; args=(1100012, InvoiceStatusChoices.PROCESSED, datetime.datetime(2024, 10, 2, 15, 15, 48, 881535, tzinfo=datetime.timezone.utc)); alias=default
+(0.003) INSERT INTO "api_emaillog" ("debt_id", "sent_at", "status") VALUES (1100011, '2024-10-02T15:15:48.882982+00:00'::timestamptz, 'Sent') RETURNING "api_emaillog"."id"; args=(1100011, datetime.datetime(2024, 10, 2, 15, 15, 48, 882982, tzinfo=datetime.timezone.utc), 'Sent'); alias=default
+Internal Server Error: /process-csv/
+"POST /process-csv/ HTTP/1.1" 500 38
+/app/challenge/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /process-csv/
+"POST /process-csv/ HTTP/1.1" 500 38
+Watching for file changes with StatReloader
+Bad Request: /process-csv/
+"POST /process-csv/ HTTP/1.1" 400 109
+Bad Request: /process-csv/
+"POST /process-csv/ HTTP/1.1" 400 109
+/app/challenge/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /process-csv/
+"POST /process-csv/ HTTP/1.1" 500 38
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/challenge/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/challenge/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/app/challenge/challenge/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/challenge/challenge/celery.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/challenge/__init__.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/app/challenge/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+/app/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/challenge/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/challenge/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+/app/challenge/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Watching for file changes with StatReloader
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Watching for file changes with StatReloader
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /process-csv/ HTTP/1.1" 202 76
+Watching for file changes with StatReloader
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+"POST /process-csv/ HTTP/1.1" 202 76
+"POST /process-csv/ HTTP/1.1" 202 76
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+Bad Request: /process-csv/
+/app/challenge/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/app/challenge/celery.py changed, reloading.
+Watching for file changes with StatReloader
+/app/api/tasks.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /process-csv/
+Bad Request: /process-csv/

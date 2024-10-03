@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "hiringchallenge"
+version = "0.1.0"
+description = "Hiring Challenge"
+authors = ["Igor Amaral <igorviana.co@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "^5.1.1"
+djangorestframework = "^3.15.2"
+celery = "^5.4.0"
+redis = "^5.1.0"
+flower = "^2.0.1"
+psycopg2-binary = "^2.9.9"
+pytest = "^8.3.3"
+pytest-django = "^4.9.0"
+pytest-cov = "^5.0.0"
+pytest-mock = "^3.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

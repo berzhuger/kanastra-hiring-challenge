@@ -1,0 +1,79 @@
+services:
+  web:
+    build: .
+    command: poetry run python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+      - celery_worker_1
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: challenge
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  db_test:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: challenge_test
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data_test:/var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  celery_worker_1:
+    build: .
+    command: poetry run celery -A challenge worker --loglevel=info --autoscale=20,3
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - redis
+      - db
+
+  flower:
+    build: .
+    command: poetry run celery -A challenge flower --port=5555
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "5555:5555"
+    depends_on:
+      - redis
+      - db
+      - celery_worker_1
+
+  tests:
+    build:
+      context: .
+      target: test
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - db_test
+      - redis
+      - celery_worker_1
+
+volumes:
+  postgres_data:
+  postgres_data_test:
