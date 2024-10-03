@@ -17,8 +17,8 @@ Pode ser acessado em http://localhost:5555
 
 1. Clone o repositório:
    ```sh
-   git clone https://seu-repositorio-url.git
-   cd nome-do-projeto
+   git https://github.com/berzhuger/kanastra-hiring-challenge
+   cd kanastra-hiring-challenge
    ```
 
 ## Uso
